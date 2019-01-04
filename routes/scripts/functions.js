@@ -1,7 +1,11 @@
 import { colorDifference, scaleRGB, rgb2hsv } from './equations.js'
-import { colors } from './constants.js'
+import { colors as oldColors } from './constants.js'
 
-const parsePixel = ({column:x, row:y}, canvas, overlay) => {
+const parsePixel = async ({column:x, row:y}, canvas, overlay) => {
+    const colors = await oldColors
+    overlay.getContext('2d').fillStyle = `rgb(0,0,0)`
+    overlay.getContext('2d').fillRect(x,y,1,1);
+
     const [red, green, blue, alpha ] = canvas.getContext('2d').getImageData(x, y, 1, 1).data
     let closestColor = {}
     let closestColorName = ''
@@ -17,7 +21,7 @@ const parsePixel = ({column:x, row:y}, canvas, overlay) => {
     
     overlay.getContext('2d').fillStyle = `rgb(${closestColor.red}, ${closestColor.green}, ${closestColor.blue})`
     overlay.getContext('2d').fillRect(x,y,1,1);
-    console.log(closestColorName)
+    // console.log(closestColorName)
     // document.querySelector(`.swatch.${closestColorName} .totals`).innerHTML = Number(document.querySelector(`.swatch.${closestColorName} .totals`).innerHTML) + 1
 
     const scaledRGB = scaleRGB({red, green, blue})
@@ -40,3 +44,15 @@ export function* parsePixels(canvas, overlay, img) {
     return pixels
 }
 
+export function rgb2hex(rgb, noHash = false) {
+    if(!noHash) return `#${Object.values(rgb).map(n => n.toString(16).padStart(2, '0')).join('')}`
+    else return `${Object.values(rgb).map(n => n.toString(16).padStart(2, '0')).join('')}`
+}
+
+export function hex2rgb(hex) {
+    let [match, red, green, blue] = hex.replace('#', '').match(/([a-z0-9]{2})([a-z0-9]{2})([a-z0-9]{2})/i)
+    red = parseInt(red, 16)
+    green = parseInt(green, 16)
+    blue = parseInt(blue, 16)
+    return {red, green, blue}
+}

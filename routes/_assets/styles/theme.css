@@ -4,29 +4,140 @@
 /* https://clrs.cc/ */
 
 :root {
-    /* --color-primary: #2164f3;
-    --color-secondary: #ff6600;
-    --color-gray: #6f6f6f;
-    --color-silver: #ebebeb;
-    --color-white: #ffffff;
-    --color-blue: #0000cc;
-    --color-light-blue: #99ccff;
-    --color-yellow: #ffb100;
-    --color-purple: #551a8b;
-    --color-violet: #cd29c0;
-    --color-green: #008040; */
     
-    --color-blue--rgb: 0, 0, 204;
-    --color-light-blue--rgb: 153, 204, 255;
-    --color-purple--rgb: 85, 26, 139;
-    --color-violet--rgb: 205, 41, 192;
-    --color-green--rgb: 0, 128, 64;
-    --color-yellow--rgb: 255, 177, 0;
-
+    --color-red: #ff0000;
+    --color-orange: #ff7d00;
+    --color-yellow: #ffff00;
+    --color-springGreen: #7dff00;
+    --color-green: #00ff00;
+    --color-turquoise: #00ff7d;
+    --color-cyan: #00ffff;
+    --color-ocean: #007dff;
+    --color-blue: #0000ff;
+    --color-violet: #7d00ff;
+    --color-magenta: #ff00ff;
+    --color-raspberry: #ff007d;
+    
     --font-color: #494949;
     --header-font: "Josefin Sans",Arial,sans-serif;
     --content-font: "Amatic SC",Arial,sans-serif;
     --mobile-breakpoint: 720px;
     --max-page-width: 90vw;
     --canvas-height: 85vh;
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-one: #333333;
+    --color-gray-two: #666666;
+    --color-gray-three: #999999;
+    --color-gray-four: #aaaaaa;
+    --color-gray-five: #cccccc;
+    --color-gray-six: #dddddd;
+
+
+
+
+
+    --color-ultra-violet: #6B5B95; /* PANTONE 18-3838 */
+    --color-fiesta: #DD4132; /* PANTONE 17-1564 */
+    --color-jester-red: #9E1030; /* PANTONE 19-1862 */
+    --color-turmeric: #FE840E; /* PANTONE 15-1264 */
+    --color-living-coral: #FF6F61; /* PANTONE 16-1546 */
+    --color-pink-peacock: #C62168; /* PANTONE 18-2045 */
+    --color-pepper-stem: #8D9440; /* PANTONE 17-0542 */
+    --color-aspen-gold: #FFD662; /* PANTONE 13-0850 */
+    --color-princess-blue: #00539C; /* PANTONE 19-4150 */
+    --color-toffee: #755139; /* PANTONE 18-1031 */
+    --color-mango-mojito: #D69C2F; /* PANTONE 15-0960 */
+    --color-terrarium-moss: #616247; /* PANTONE 18-0416 */
+    --color-sweet-lilac: #E8B5CE; /* PANTONE 14-2808 */
+    --color-soybean: #D2C29D; /* PANTONE 13-0919 */
+    --color-eclipse: #343148; /* PANTONE 19-3810 */
+    --color-sweet-corn: #F0EAD6; /* PANTONE 11-0106 */
+    --color-brown-granite: #615550; /* PANTONE 19-0805 */
+    --color-red-pear: #7F4145; /* PANTONE 19-1536 */
+    --color-valiant-poppy: #BD3D3A; /* PANTONE 18-1549 */
+    --color-nebulas-blue: #3F69AA; /* PANTONE 18-4048 */
+    --color-ceylon-yellow: #D5AE41; /* PANTONE 15-0850 */
+    --color-martini-olive: #766F57; /* PANTONE 18-0625 */
+    --color-russet-orange: #E47A2E; /* PANTONE 16-1255 */
+    --color-crocus-petal: #BE9EC9; /* PANTONE 15-3520 */
+    --color-limelight: #F1EA7F; /* PANTONE 12-0740 */
+    --color-quetzal-green: #006E6D; /* PANTONE 18-5025 */
+    --color-sargasso-sea: #485167; /* PANTONE 19-4031 */
+    --color-tofu: #EAE6DA; /* PANTONE 11-4801 */
+    --color-almond-buff: #D1B894; /* PANTONE 14-1116 */
+    --color-quiet-gray: #BCBCBE; /* PANTONE 14-4107 */
+    --color-meerkat: #A9754F; /* PANTONE 16-1438 */
+    --color-meadowlark: #ECDB54; /* PANTONE 13-0646 */
+    --color-cherry-tomato: #E94B3C; /* PANTONE 17-1563 */
+    --color-little-boy-blue: #6F9FD8; /* PANTONE 16-4132 */
+    --color-chili-oil: #944743; /* PANTONE 18-1440 */
+    --color-pink-lavender: #DBB1CD; /* PANTONE 14-3207 */
+    --color-blooming-dahlia: #EC9787; /* PANTONE 15-1520 */
+    --color-arcadia: #00A591; /* PANTONE 16-5533 */
+    --color-emperador: #6C4F3D; /* PANTONE 18-1028 */
+    --color-almost-mauve: #EADEDB; /* PANTONE 12-2103 */
+    --color-spring-crocus: #BC70A4; /* PANTONE 17-3020 */
+    --color-lime-punch: #BFD641; /* PANTONE 13-0550 */
+    --color-sailor-blue: #2E4A62; /* PANTONE 19-4034 */
+    --color-harbor-mist: #B4B7BA; /* PANTONE 14-4202 */
+    --color-warm-sand: #C0AB8E; /* PANTONE 15-1214 */
+    --color-coconut-milk: #F0EDE5; /* PANTONE 11-0608 */
+    --color-greenery: #92B558; /* PANTONE 15-0343 */
+    --color-grenadine: #DC4C46; /* PANTONE 17-1558 */
+    --color-tawny-port: #672E3B; /* PANTONE 19-1725 */
+    --color-ballet-slipper: #F3D6E4; /* PANTONE 13-2808 */
+    --color-butterum: #C48F65; /* PANTONE 16-1341 */
+    --color-navy-peony: #223A5E; /* PANTONE 19-4029 */
+    --color-neutral-gray: #898E8C; /* PANTONE 17-4402 */
+    --color-shaded-spruce: #005960; /* PANTONE 19-4524 */
+    --color-golden-lime: #9C9A40; /* PANTONE 16-0543 */
+    --color-marina: #4F84C4; /* PANTONE 17-4041 */
+    --color-autumn-maple: #D2691E; /* PANTONE 17-1145 */
+    --color-niagara: #578CA9; /* PANTONE 17-4123 */
+    --color-primrose-yellow: #F6D155; /* PANTONE 13-0755 */
+    --color-lapis-blue: #004B8D; /* PANTONE 19-4045 */
+    --color-flame: #F2552C; /* PANTONE 17-1462 */
+    --color-island-paradise: #95DEE3; /* PANTONE 14-4620 */
+    --color-pale-dogwood: #EDCDC2; /* PANTONE 13-1404 */
+    --color-pink-yarrow: #CE3175; /* PANTONE 17-2034 */
+    --color-kale: #5A7247; /* PANTONE 18-0107 */
+    --color-hazelnut: #CFB095; /* PANTONE 14-1315 */
+    --color-riverside: #4C6A92; /* PANTONE 17-4028 */
+    --color-airy-blue: #92B6D5; /* PANTONE 14-4122 */
+    --color-sharkskin: #838487; /* PANTONE 17-3914 */
+    --color-aurora-red: #B93A32; /* PANTONE 18-1550 */
+    --color-warm-taupe: #AF9483; /* PANTONE 16-1318 */
+    --color-dusty-cedar: #AD5D5D; /* PANTONE 18-1630 */
+    --color-lush-meadow: #006E51; /* PANTONE 18-5845 */
+    --color-spicy-mustard: #D8AE47; /* PANTONE 14-0952 */
+    --color-potters-clay: #9E4624; /* PANTONE 18-1340 */
+    --color-bodacious: #B76BA3; /* PANTONE 17-3240 */
+    --color-rose-quartz: #F7CAC9; /* Goes with: Peach Echo, Serenity, Lilac Grey */
+    --color-peach-echo: #F7786B; /* Goes with: Rose Quartz, Serenity, Lilac Grey */
+    --color-serenity: #91A8D0; /* Goes with: Buttercup, Snorkel Blue, Peach Echo */
+    --color-snorkel-blue: #034F84; /* Goes with: Buttercup, Iced Coffee, Peach Echo */
+    --color-limpet-shell: #98DDDE; /* Goes with: Iced Coffee, Peach Echo, Rose Quartz */
+    --color-lilac-grey: #9896A4; /* Goes with: Fiesta, Green Flash, Iced Cofee */
+    --color-iced-coffee: #B18F6A; /* Goes with: Rose Quartz, Serenity, Lilac Grey */
+    --color-buttercup: #FAE03C; /* Goes with: Snorkel Blue, Serenity, Lilac Grey */
+    --color-green-flash: #79C753; /* Goes with: Snorkel Blue, Serenity, Limpet Shell */
+    --color-marsala: #955251; /* PANTONE 18-1438 */
+    --color-radiand-orchid: #B565A7; /* PANTONE 18-3224 */
+    --color-emerald: #009B77; /* PANTONE 17-5641 */
+    --color-tangerine-tango: #DD4124; /* PANTONE 17-1463 */
+    --color-honeysucle: #D65076; /* PANTONE 18-2120 */
+    --color-turquoise: #45B8AC; /* PANTONE 15-5510 */
+    --color-mimosa: #EFC050; /* PANTONE 14-0848 */
+    --color-blue-izis: #5B5EA6; /* PANTONE 18-3943 */
+    --color-chili-pepper: #9B2335; /* PANTONE 19-1557 */
+    --color-sand-dollar: #DFCFBE; /* PANTONE 13-1106 */
+    --color-blue-turquoise: #55B4B0; /* PANTONE 15-5217 */
+    --color-tigerlily: #E15D44; /* PANTONE 17-1456 */
+    --color-aqua-sky: #7FCDCD; /* PANTONE 14-4811 */
+    --color-true-red: #BC243C; /* PANTONE 19-1664 */
+    --color-fuchsia-rose: #C3447A; /* PANTONE 17-2031 */
+    --color-cerulean-blue: #98B4D4; /* PANTONE 15-4020 */
+
 }

@@ -1,7 +1,8 @@
 import { parsePixels } from './functions.js'
-import { colors } from './constants.js';
+import { colors as moreColors } from './constants.js';
 
 (async () => {
+    const colors = await moreColors
     // const res = colorDifference(colors.yellow, colors.blue)
     // console.log(res)
     let processed = 0
@@ -35,14 +36,10 @@ import { colors } from './constants.js';
             window.clearInterval(intvl)
         }
         processed++
-        updatePreview(value)
+        updatePreview({...value})
         currentCount.forEach(el => el.innerHTML = processed.toLocaleString())
         
         
-        
-        
-        
-
         const intvl = window.setInterval(async () => {
             const { value, done } = sequence.next()
             // console.log(value, done)
@@ -111,11 +108,11 @@ import { colors } from './constants.js';
 })()
 
 
-function updatePreview({red, green, blue, ...colorInformation}) {
+async function updatePreview(colorSwatches) {
+    const { red, green, blue, ...stuff } = await colorSwatches
+
     const previewExists = document.querySelector('color-preview')
-    if(previewExists) {
-        previewExists.parentElement.removeChild(previewExists)
-    }
+    if(previewExists) previewExists.parentElement.removeChild(previewExists)
     
     const preview = document.createElement('color-preview')
     const swatch = document.createElement('color-swatch')
